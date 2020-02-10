@@ -325,20 +325,15 @@ h2 {
   font-family: 'Palanquin Dark', sans-serif;
   font-weight: lighter;
 }
-.col {
-  max-width: 800px;
-  margin: 0 auto;
-}
-@media ( max-width: 800px ) {
-  .col {
-    width: 100%;
-  }
-}
 nav {
   width: 100%;
   padding: 1% 0;
   display: flex;
   justify-content: baseline;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
 }
 nav a {
   margin: 0 2%;
@@ -362,4 +357,15 @@ footer {
 }
 .post img {
   max-width: 100%;
+}
+.col {
+  max-width: 800px;
+  margin: -1% auto;
+  padding: 1% 0;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5), -2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+@media ( max-width: 800px ) {
+  .col {
+    width: 100%;
+  }
 }
