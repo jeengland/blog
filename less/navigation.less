@@ -5,13 +5,28 @@ nav {
     justify-content: baseline;
     position: sticky;
     top: 0;
-    background-color: white;
+    background-color: @nav-background;
     border-bottom: 0.5px solid @shadow-color;
+    @media @tablet {
+        justify-content: center;
+    }
     a {
         margin: 0 2%;
+        padding: 0.3% .5% .5%;
         text-decoration: none;
         font-size: @nav-text;
         font-weight: bolder;
         color: inherit;
+        &:hover {
+            box-shadow: inset 1px 1px 0px, inset -1px -1px 0px;
+        }
+    }
+    .current-page {
+        background-color: @text-color;
+        color: @nav-background;
+        &:hover {
+            color: @nav-background;
+            box-shadow: none;
+        }
     }
 }
