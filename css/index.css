@@ -388,6 +388,10 @@ footer a {
 footer a:hover {
   color: grey;
 }
+posts {
+  display: flex;
+  flex-direction: column-reverse;
+}
 .post {
   padding: 0 2%;
 }
@@ -408,6 +412,7 @@ footer a:hover {
 }
 .post p {
   line-height: 1.5;
+  font-size: 1.2rem;
 }
 .col {
   max-width: 800px;
