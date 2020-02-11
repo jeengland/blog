@@ -388,12 +388,14 @@ footer a {
 footer a:hover {
   color: grey;
 }
-posts {
+.posts {
   display: flex;
   flex-direction: column-reverse;
 }
 .post {
-  padding: 0 2%;
+  padding: 0 2% 2%;
+  margin-bottom: 3%;
+  border-bottom: dashed 0.7px rgba(0, 0, 0, 0.5);
 }
 .post h2 {
   margin-bottom: 0;
