@@ -4,6 +4,7 @@
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel='stylesheet' href='css/index.css'>
+    <script src='js/index.js' async></script>
     <title>Blog</title>
 </head>
 <body>
@@ -83,8 +84,30 @@
                 </section>
                 <!-- #TODO add tags section: unordered list? -->
             </article>
+            <article class='post'>
+                <h2>An Event-full Day</h2>
+                <time>02/11/2019</time>
+                <section class='post-content'>
+                    <p>Probably gonna be a short post today, it was kind of a slow and unproblematic day. Today was the second half of the beginning of lessons
+                    really starting to get into what modern internet development is about. Yesterday was about dynamically inserting content and styling onto a 
+                    page, and today was all about writing code to handle "events," such as a click, a scroll, or a key press. The styling language CSS has been 
+                    updated since its beginnings to be able to handle some more basic events like clicking a button or detecting if the mouse is hover over an 
+                    element on the page, but they aren't really useful for anything other than changing how something looks or where it is on the page</p>
+                    <p>Most of the code used to handle these events follows the same basic structure. First we store an element on the page, like say the date 
+                    at the top of this post. If you go inside of the code, it would be enclosed in a time tag, so we would tell Javascript to look for elements
+                    inside of time tags and put them in a list. Then we would write code that would say to look at everything in that list and assign it what is 
+                    called an "event listener," which is really just what it sounds like: a function that is waiting for an event to happen. You have to tell it
+                    which event it is listening for, so in this case maybe a click. All that's left to do is to tell it what to do when it registers a click,
+                    something like turning the text red. And that's it! The code we write might end up looking something like this:</p>
+                    <img src='assets/event-listener.png' alt='Example code for an event listener function' title='No comments today! For shame!' />
+                    <p>And you're done! It might still look a little complicated but it's really just those three steps: make a variable point at a page element, 
+                    tack a function on to tell it which event to wait for, and tell it what to do when that event happens. If you can remember those three steps
+                    you're well on your way to your first baby steps in making web pages that react to your user's input! If you're where I was earlier today though,
+                    now you have to think of ten different things to make a webpage do, and that's a different beast entirely. . .</p>
+                </section>
+            </article>
             <!-- Post layout template
-            <article>
+            <article class='post'>
                 <h2>(Post Title)</h2>
                 <time>(The date)</time>
                 <section class='post-content'>
