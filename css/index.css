@@ -418,6 +418,12 @@ footer a:hover {
   line-height: 1.5;
   font-size: 1.2rem;
 }
+.post .show {
+  display: none;
+}
+.post .hidden {
+  display: none;
+}
 .col {
   max-width: 800px;
   margin: -1% auto;

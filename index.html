@@ -23,13 +23,14 @@
                 <h2>Hello World!</h2>
                 <time>02/09/2020</time>
                 <section class='post-content'>
-                    <p>Nearly every webdev article seems to say that I should have some kind of blog charting 
+                    <p class='first'>Nearly every webdev article seems to say that I should have some kind of blog charting 
                     my journey through learning webdev, so I finally gave in. Of course as a webdev student 
                     it wouldn't make any sense to blog on someone else's site, so I'm building my own. I don't 
                     know enough about webdev yet to build anything other than a static site, so the beginning of
                     this blog isn't going to look pretty. I am currently typing this blog post directly into the 
                     HTML file, and I doubt the blog is going to look pretty at the end of tonight. Let's see for
                     ourselves:</p>
+                    <button class='show'>Show more</button>
                     <img src='assets/blog-02092020.png' alt='The blog as it appeared on the day of this post' title='The blog as it appeared on 02/09/2020'>
                     <p>Not my best work! But I figured it was better to get into the practice of blogging frequently
                     over waiting to build a site to the standards I'd like to. It should also be interesting to see 
@@ -47,6 +48,7 @@
                     the material covered is challenging. But the community is extremely supportive and if you ask for help and connect
                     with your peers, I have no doubt you too could make it in this program. I need to stop ranting and start building this 
                     blog site, so I'll leave it there for now. Here's hoping I make it past more than one post!</p>
+                    <button class='hide'>Show less</button>
                 </section>
                 <!-- #TODO add tags section: unordered list? -->
             </article>
@@ -54,10 +56,11 @@
                 <h2>Back for Seconds</h2>
                 <time>02/10/2019</time>
                 <section class='post-content'>
-                    <p>So I made it to the second post, more than I can say about any previous attempts at any kind of writing. Maybe
+                    <p class='first'>So I made it to the second post, more than I can say about any previous attempts at any kind of writing. Maybe
                     it's the fact that I'm building the blog as well as writing in it that's keeping me going. After today's lesson I'm
                     confident that very soon I'll know how to implement a better system than writing blogposts directly into HTML, so 
                     that's a plus.</p>
+                    <button class='show'>Show more</button>
                     <p>Today was an interesting day, as it was the first day back on regular lessons after my first build week. What's build
                     week, you ask? It's a week I have to work with a team to make a working app, or at least that's what it's going to be
                     next time. This time I made a static marketing site for the app, which is a bit less exciting but much more within my
@@ -81,6 +84,7 @@
                     finally felt at peace enough to move on to the stretch project of building a <a target = '_blank' href='http://jacobengland.computer/DOM-I/stretch-assignment/digital_timer/'>timer</a>.
                     All in all, I feel like I had a productive day, and I'm sure the drive to keep doing more than I'm asked to or will even
                     necessarily be rewarded for is going to benefit me as far as my learning experience goes.</p>
+                    <button class='hide'>Show less</button>
                 </section>
                 <!-- #TODO add tags section: unordered list? -->
             </article>
@@ -88,11 +92,12 @@
                 <h2>An Event-full Day</h2>
                 <time>02/11/2019</time>
                 <section class='post-content'>
-                    <p>Probably gonna be a short post today, it was kind of a slow and unproblematic day. Today was the second half of the beginning of lessons
+                    <p class='first'>Probably gonna be a short post today, it was kind of a slow and unproblematic day. Today was the second half of the beginning of lessons
                     really starting to get into what modern internet development is about. Yesterday was about dynamically inserting content and styling onto a 
                     page, and today was all about writing code to handle "events," such as a click, a scroll, or a key press. The styling language CSS has been 
                     updated since its beginnings to be able to handle some more basic events like clicking a button or detecting if the mouse is hover over an 
                     element on the page, but they aren't really useful for anything other than changing how something looks or where it is on the page</p>
+                    <button class='show'>Show more</button>
                     <p>Most of the code used to handle these events follows the same basic structure. First we store an element on the page, like say the date 
                     at the top of this post. If you go inside of the code, it would be enclosed in a time tag, so we would tell Javascript to look for elements
                     inside of time tags and put them in a list. Then we would write code that would say to look at everything in that list and assign it what is 
@@ -104,6 +109,7 @@
                     tack a function on to tell it which event to wait for, and tell it what to do when that event happens. If you can remember those three steps
                     you're well on your way to your first baby steps in making web pages that react to your user's input! If you're where I was earlier today though,
                     now you have to think of ten different things to make a webpage do, and that's a different beast entirely. . .</p>
+                    <button class='hide'>Show less</button>
                 </section>
             </article>
             <!-- Post layout template
@@ -111,7 +117,10 @@
                 <h2>(Post Title)</h2>
                 <time>(The date)</time>
                 <section class='post-content'>
+                    (First section of post)
+                    <button class='show'>Show more</button?
                     (Whatever the post contains)
+                    <button class='hide'>Show less</button>
                 </section>
                 #TODO add tags section: unordered list?
             </article> -->
