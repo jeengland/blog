@@ -112,13 +112,49 @@
                     <button class='hide'>Show less</button>
                 </section>
             </article>
+            <article class='post'>
+                <h2>Blog Expansion</h2>
+                <time>02/12/2020</time>
+                <section class='post-content'>
+                    <p class='first'>If you scroll through the blog today you may notice a few new things! Most notably, all the blog posts can now
+                    be expanded to show more content or, conversely, contracted to hide all but the first paragraph. This allows me to fit more content within
+                    the window view, which I guess isn't a problem at this point but we're planning on it being one! I also made it so that the latest post is 
+                    expanded but all the older ones aren't, which may sound like something that happens automatically, but it was actually a pain!</p>
+                    <button class='show'>Show more</button>
+                    <p>The exanding and contracting actually has more to do with yesterday's curriculum than today's, despite what you might think. It's mostly 
+                    a simple trick: I added a button and when you click it, it hides itself and makes the rest of the content appear, along with a closing button 
+                    at the bottom. When you click the bottom button? It hides the content and itself and makes the top button appear! You could do it all day if 
+                    you wanted to, but it'd make it pretty hard to read this blog post.</p>
+                    <p>As far as deciding whether a post is open or closed when you first load the page, it's almost as simple. I just have Javascript make a list
+                    of all the posts, and hide the lower content on all but the last one. The last one? Surely I mean the first one! Well if you look at the HTML for
+                    the page you would see that in there all the posts are in top-to-bottom chronological order, whereas the posts are displayed in the opposite of
+                    that order. So the most recent post is the last post in the list, which might fool someone who isn't familiar with the rest of the site's code, or me
+                    earlier today when I was trying to hide all but the first post on the page.</p>
+                    <p>All that was left to do at that point was add some fancy button styles- or so I thought. At the last second before I was going to upload the
+                    finished site, I noticed an annoying bug. When you clicked the expand button, about 90% of the time the page would scroll you to the bottom of 
+                    the post and you'd have to scroll back up to where you left off.</p>
+                    <img src='assets/bad-expand.gif' alt='An animated gif showing the expansion bug' title='Wow, he has GIFs now? The money really changed him' />
+                    <p>Not a life-ending bug, but certainly an annoying one, and I can't afford to lose any of my readers with the holidays fast approaching. So I spent
+                    another hour researching and experimenting. None of the solutions on long-abandoned help threads seemed to help, and a lot of the solutions I came up with
+                    would have worked in a different situation but not this one. Finally, after the fifth or sixth page on scroll properties, inspiration struck: 
+                    scroll is saved as a number representing how far from the top you've scrolled, so if I saved that value before adding the content, I could manually
+                    set the user's scroll to be the same once I added the content. It seemed like a far-fetched solution to me when I spun it up, but once I implemented 
+                    it I could see that it worked like a dream! Crisis averted.</p>
+                    <p>As far as today's curriculum, it was about using Javascript to take raw text data and make it into page elements like titles and paragraphs. This is 
+                    something I've desperately wanted to do to this blog. However, next week we're going to be learning a much more advanced method for doing this that will 
+                    make it even easier than it would be if I used what I learned today to do it, so I'm going to hold off and keep hard-coding all the blog posts into the 
+                    HTML. Instead, I kept in mind that I was going to refactor soon and built my button component in a more future-proof way than I might have normally. Hopefully
+                    I guessed correctly and won't have to redo everything I did today next week, but if I do that's just more practice! Stay posted and we'll both find out.</p>
+                    <button class='hide'>Show less</button>
+                </section>
+            </article>
             <!-- Post layout template
             <article class='post'>
                 <h2>(Post Title)</h2>
                 <time>(The date)</time>
                 <section class='post-content'>
-                    (First section of post)
-                    <button class='show'>Show more</button?
+                    <p class='first'>(First section of post)</p>
+                    <button class='show'>Show more</button>
                     (Whatever the post contains)
                     <button class='hide'>Show less</button>
                 </section>
