@@ -4,3 +4,13 @@
             color: @link-hover;
         }
 }
+
+.button-border(@default-color, @interact-color) {
+    border: 5px solid @default-color;
+        &:hover {
+            border: 5px solid @interact-color;
+        }
+        &:active  {
+            border: 5px double @interact-color;
+        }
+}

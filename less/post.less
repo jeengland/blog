@@ -20,6 +20,18 @@
         line-height: 1.5;
         font-size: 1.2rem;
     }
+    button {
+        background-color: black;
+        border: 5px black solid;
+        color: white;
+        padding: 1% 2% 1%;
+        font-family: @Palanquin-Dark;
+        .button-border(@text-color, @text-color);
+        &:hover {
+            background-color: white;
+            color: black;
+        }
+    }
     .show {
         display: none;
     }

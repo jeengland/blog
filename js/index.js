@@ -43,11 +43,15 @@ visBtn.forEach((button) => {
             bottom.forEach((element) => element.classList.add('hidden'));
         }
         else if (event.target === show) {
+            // Store current scroll height
+            let scroll = window.scrollY;
             // Toggle button displays
             hide.style.display = 'block';
             show.style.display = 'none';
             // Show all bottom content
             bottom.forEach((element) => element.classList.remove('hidden'));
+            // Put user at the scroll height they were at before expanding to avoid disorientation
+            scrollTo(0, scroll);
         }
     })
 })

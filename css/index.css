@@ -360,9 +360,13 @@ nav a {
   font-size: 1.2rem;
   font-weight: bolder;
   color: inherit;
+  border: 5px solid transparent;
 }
 nav a:hover {
-  box-shadow: inset 1px 1px 0px, inset -1px -1px 0px;
+  border: 5px solid black;
+}
+nav a:active {
+  border: 5px double black;
 }
 nav .current-page {
   background-color: black;
@@ -417,6 +421,24 @@ footer a:hover {
 .post p {
   line-height: 1.5;
   font-size: 1.2rem;
+}
+.post button {
+  background-color: black;
+  border: 5px black solid;
+  color: white;
+  padding: 1% 2% 1%;
+  font-family: 'Palanquin Dark', sans-serif;
+  border: 5px solid black;
+}
+.post button:hover {
+  border: 5px solid black;
+}
+.post button:active {
+  border: 5px double black;
+}
+.post button:hover {
+  background-color: white;
+  color: black;
 }
 .post .show {
   display: none;
