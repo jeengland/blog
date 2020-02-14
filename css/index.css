@@ -446,6 +446,27 @@ footer a:hover {
 .post .hidden {
   display: none;
 }
+.post .nasaContainer {
+  max-width: 75%;
+  margin: 2% auto;
+  padding: 2% 0;
+  border: solid black 1px;
+}
+.post .nasaContainer .nasaTitle {
+  text-align: center;
+}
+.post .nasaContainer .nasaDate {
+  text-align: center;
+  margin: 1% 0 0;
+}
+.post .nasaContainer .nasaDesc {
+  font-size: 1.1em;
+  padding: 2%;
+  line-height: 1.3;
+}
+.post .nasaContainer .nasaLink {
+  padding: 2%;
+}
 .col {
   max-width: 800px;
   margin: -1% auto;

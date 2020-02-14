@@ -4,6 +4,7 @@
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel='stylesheet' href='css/index.css'>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src='js/index.js' async></script>
     <title>Blog</title>
 </head>
@@ -147,6 +148,29 @@
                     I guessed correctly and won't have to redo everything I did today next week, but if I do that's just more practice! Stay posted and we'll both find out.</p>
                     <button class='hide'>Show less</button>
                 </section>
+            </article>
+            <article class='post'>
+                <h2>Fun With APIs</h2>
+                <time>02/13/2020</time>
+                <section class='post-content'>
+                    <p class='first'>Today started out feeling like an intimidating day, but as it went on it became a lot more easy and I even acquired some fun skills that will
+                    let me build more fun things than I even imagined I could have yesterday! In fact the first one of those things is in this very post! At the beginning of the day 
+                    they told us we were going to be learning about "promises" which, frankly, sounds like some kind of cult to me. It turns out it's just a fancy name for telling your 
+                    code to do something while it's waiting on something to load! Not actually very scary at all.</p>
+                    <button class='show'>Show more</button>
+                    <p>The rest of what we learned about was how to use APIs, which is not something I was expecting to get to so early. Basically an API is code someone else wrote that 
+                    allows you to access a database on their end. The example they made us build was kind of boring, just taking our Github profile and displaying information from it in 
+                    a list. But since I was brimming with newfound knowledge and had a bit of time to kill I decided to build my own component using what I learned. I looked around for an
+                    API to build on and found that NASA has a public API that allows me to get some pretty cool stuff. So I started reading the documentation and ended up building an element
+                    that displays a different photo from NASA every day:</p>
+                    <div class='nasa'></div>
+                    <p>It might not look like much right now but I promise if you come back tomorrow, it'll be a different picture. I initially intended to make it so you could browse through
+                    several different photos but it ended up being much more difficult than I anticipated and I'm short on time today, so maybe some other time. But as it is, it makes a request 
+                    from NASA for the photo, description, and link to a higher res version, and then automatically builds a component out of them and puts it into the page. I'm pretty excited to 
+                    see what other APIs I can find and what I can build with them, because this definitely seems like it's just the beginning!</p>
+                    <button class='hide'>Show less</button>
+                </section>
+                
             </article>
             <!-- Post layout template
             <article class='post'>

@@ -81,3 +81,52 @@ postSections.forEach((post) => {
         })
     }
 })
+
+
+
+// --------------------- Astronomy photo of the day component -----------------------
+
+// Find blogpost about APIs 
+
+let nasaPost = document.querySelector('.nasa');
+
+// API call
+axios
+    .get('https://api.nasa.gov/planetary/apod?api_key=Ka3skeqen91igEUbNUDEzw6m3639xJhqlBxlGhyu')
+    .then(response => {
+        const display = nasa(response.data);
+        nasaPost.appendChild(display);
+        today = response.data.date;
+    })
+
+// NASA Photo of the Day display constructor
+let nasa = (props) => {
+    // Create elements
+    let container = document.createElement('div'),
+        title = document.createElement('h3'),
+        img = document.createElement('img'),
+        date = document.createElement('p'),
+        desc = document.createElement('p'),
+        link = document.createElement('a');
+
+    // Add classes to appropriate elments
+    container.classList.add('nasaContainer');
+    title.classList.add('nasaTitle');
+    img.classList.add('nasaPhoto');
+    date.classList.add('nasaDate')
+    desc.classList.add('nasaDesc');
+    link.classList.add('nasaLink');
+    // Add content to elements
+    title.textContent = 'NASA Photo of the Day';
+    img.src = props.url;
+    img.alt = props.title;
+    img.title = props.title;
+    date.textContent = `Photo of the day for ${props.date}`;
+    desc.textContent = props.explanation;
+    link.href = props.hdurl;
+    link.textContent = 'Link to HD version'
+    // Append elements to container
+    container.append(title, img, date, desc, link);
+    // Return whole object
+    return container;
+}
