@@ -19,7 +19,7 @@
             <h1>Blog Home</h1>
             <img src='assets/home-header.jpg' alt='A greyscale skyline' title='Photo courtesy of New York Public Library'/>
         </header>
-        <main class='posts'>
+        <main class='posts' id='hello-world'>
             <article class='post'>
                 <h2>Hello World!</h2>
                 <time>02/09/2020</time>
@@ -53,7 +53,7 @@
                 </section>
                 <!-- #TODO add tags section: unordered list? -->
             </article>
-            <article class='post'>
+            <article class='post' id='back-for-seconds'>
                 <h2>Back for Seconds</h2>
                 <time>02/10/2019</time>
                 <section class='post-content'>
@@ -89,7 +89,7 @@
                 </section>
                 <!-- #TODO add tags section: unordered list? -->
             </article>
-            <article class='post'>
+            <article class='post' id='an-event-full-day'>
                 <h2>An Event-full Day</h2>
                 <time>02/11/2019</time>
                 <section class='post-content'>
@@ -113,7 +113,7 @@
                     <button class='hide'>Show less</button>
                 </section>
             </article>
-            <article class='post'>
+            <article class='post' id='blog-expansion'>
                 <h2>Blog Expansion</h2>
                 <time>02/12/2020</time>
                 <section class='post-content'>
@@ -149,7 +149,7 @@
                     <button class='hide'>Show less</button>
                 </section>
             </article>
-            <article class='post'>
+            <article class='post' id='fun-with-apis'>
                 <h2>Fun With APIs</h2>
                 <time>02/13/2020</time>
                 <section class='post-content'>
@@ -169,8 +169,38 @@
                     from NASA for the photo, description, and link to a higher res version, and then automatically builds a component out of them and puts it into the page. I'm pretty excited to 
                     see what other APIs I can find and what I can build with them, because this definitely seems like it's just the beginning!</p>
                     <button class='hide'>Show less</button>
+                </section>                
+            </article>
+            <article class='post' id='react-week'>
+                <h2>React Week</h2>
+                <time>02/17/2020</time>
+                <section class='post-content'>
+                    <p class='first'>This week's posts might be a little light on content because it's finally React week! Some of you might be wondering what that means, but don't worry, we'll get
+                    to that in the rest of the post. Bascially what it means for the blog is I'll finally be refactoring it to work more like a regular website, with a text box I type into to enter 
+                    my posts into the website instead of me writing my posts directly into the code. In fact, the HTML file for the website will be looking much more bare than it does right now. Exciting 
+                    stuff that we'll be getting into in the upcoming days!</p>
+                    <button class='show'>Show more</button>
+                    <p>But I'm getting ahead of myself, I need to catch everyone up on what exactly React is. React is one of many libraries available to developers, a library being a set of code another developer 
+                    wrote to make their lives easier that I now get to use to make mine easier. In this case the developers who wrote the code are the developers of Facebook, and the part of my life that's going to
+                    be easier is building the user interface - the face of my website. This all gets quite high level, so I most likely won't cover all the specifics but from what I've done in React so far, they've 
+                    made the coding much more easy and the code much more readable.</p>
+                    <p>Take, for example, this very blog post. As it is the codefor just this post is very verbose. If you scroll through my HTML it's a massive block of text, which can make it quite difficult to work
+                    with. Here's as much of it as I can fit into a screenshot:</p>
+                    <img src='assets/this-very-post.png' alt='The code for this post' title='No reading ahead for spoilers!' />
+                    <p>And that's about as concise as it gets using this method. What would it look like if I used the methods from last week? Glad you asked! Here's basically what it would look like:</p>
+                    <img src='assets/this-post-component.png' alt='An example of how this code would look if it was made using a component' title='Quite the trim!' />
+                    <p>Where did all the content go? Well the code for making the shape of the content would be inside the Javascript file, and would be reminiscent of the repetitive mess from <a href='jacobengland.computer/blog/index#back-for-seconds'>
+                    my second post</a>. The content itself would likely be stored in a separate file that I would have the Javascript read and sort into the structure. That all seems like a very good improvement over how 
+                    it started off, but with React we can do even better. Not only this post, but the entire blog would look like this if I was using React:</p>
+                    <img src='assets/this-post-react.png' alt='How the blog HTML would look if it was built using React' title='OK this is getting out of hand' />
+                    <p>Wow! The whole blog would be inserted inside that single div element between the body tags! Why doesn't everyone just use React? Well honestly, for something like this blog React is almost definitely overkill. The React 
+                    library is not a small file, so it comes with some less than optimal load times. One of the main reasons to use React is that it updates components as the information inside the components update, and on
+                    a blog like this the updates (generously) come once a day, so that kind of rendering isn't super beneficial. But this blog is just as much about me getting some practical practice in with the skills I'm 
+                    learning as it is about me letting you all know what I'm up to, so I'll be refactoring the whole blog to use this system. This will also make the whole thing easier to work with and I'll be able to add some
+                    features that have been sitting in the backlog, like tags on the blogposts you can sort posts by. I doubt it will be the last time I refactor the whole thing, so don't get too comfortable!
+                    </p>
+                    <button class='hide'>Show less</button>
                 </section>
-                
             </article>
             <!-- Post layout template
             <article class='post'>
