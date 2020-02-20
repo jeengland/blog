@@ -202,6 +202,28 @@
                     <button class='hide'>Show less</button>
                 </section>
             </article>
+            <article class='post'>
+                <h2>Revisiting NASA</h2>
+                <time>02/19/2020</time>
+                <section class='post-content'>
+                    <p class='first'>Today I opened the training kit to find out the project was identical to something I did independently just a few days ago: making a component that would show the NASA photo of the day. Even
+                    though I only did it a few days ago, my skillset has already grown to the point that features I couldn't figure out how to add then were now within my reach. Specifically, I initially set out with the intention
+                    of allowing the user to scroll to previous days' photos.</p>
+                    <button class='show'>Show more</button>
+                    <p>Not only was I able to add that, but I also ended up adding a little calendar selector that let you pick any day you desired. You can see the final product <a href='https://jacobengland.computer/nasa-photo-of-the-day'>here</a>,
+                    but this is a two day project so if you're looking at it between this blog post and the next one it's not pretty. The next post will be about styling so I'll make sure to include before and after pictures.</p>
+                    <p>This project is the first project I've built from scratch in React, which presented some unique challenges. I had to decide how the elements would be broken down into components, which ended up feeling a little
+                    inconsistent. For example I chose to make the photo and the buttons their own component, but the description and everything around it was included in one component. I'm thinking in the future for an app of this size
+                    I'm going to build out the entire app in one big block and then decide what should be a component from there. I am happy with the approach of building out functionality before adding any styling, but it's probably only 
+                    possible because the app is this small.</p>
+                    <p>Overall, it's very interesting to see the very rapid progress I'm making within a vey short time period. Just a few days ago I couldn't figure out how to re-render the photo when the user changed the date, but now I'm 
+                    really starting to feel the benefits of using React, as one of its core features is that it repaints the whole page every time an element changes. I also have a good idea now of how I would have done it last week using only
+                    pure Javascript, so it seems like using React makes you stronger in Javascript as well, as opposed to something like a CSS preprocessor, which makes you get better at using the preprocessor instead of better at CSS. I'm looking
+                    forward to seeing what I'll be able to do in another week!</p>
+                    <button class='hide'>Show less</button>
+                </section>
+                #TODO add tags section: unordered list?
+            </article>
             <!-- Post layout template
             <article class='post'>
                 <h2>(Post Title)</h2>
