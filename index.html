@@ -222,7 +222,30 @@
                     forward to seeing what I'll be able to do in another week!</p>
                     <button class='hide'>Show less</button>
                 </section>
-                #TODO add tags section: unordered list?
+            </article>
+            <article class='post'>
+                <h2>Stylish</h2>
+                <time>02/20/2020</time>
+                <section class='post-content'>
+                    <p class='first'>The long awaited premium version of the NASA Photo of the Day site is now available <a href='https://jacobengland.computer/nasa-photo-of-the-day'>here</a>! It has taken quite a bit of work to get it to this state,
+                    most of which isn't shown because the cool styling library that I tried to use on it broke when I published it to the web. But if you're on desktop you can see a cool static background instead!</p>
+                    <button class='show'>Show more</button>
+                    I promised that I'd show before and after screenshots and I promise we'll get to that, but first let's talk about what was gone over today. We learned about two libraries that make styling the page a little bit easier. Well, one that 
+                    makes styling absurdly easy and will make your page look like every other page that uses that library, and one that make styling a bit easier. I went with the second one, called styled-component. For the first few projects using Javascript I 
+                    wrote my code in 3 different places: and HTML file for structure, a CSS file for styling, and a Javascript file for functionality. React allowed me to write in Javascript for structure and functionality at the same time, which was cool, but using
+                    styled-components I can also write all the styling in Javascript files!</p>
+                    <p>Of course in practice the amount of files doesn't actually end up being less, because I'm writing a Javascript file for every component on the page. But everything is so neatly packaged that fixing code or adjusting styling is much easier.
+                    For example, all the code for the left and right buttons on my page is contained in one component file, so if I wanted to turn the arrows green I'd just jump into that file and adjust it. This leads to much more readable code, which is always a plus.
+                    Let's get on to those before and after pictures though, I know that's what you're really here for. We'll start with before:</p>
+                    <img src="./assets/npod-past.png" alt='A screenshot of the old site, which was not very well styled at all' title='What a mess' />
+                    <p>It's not great looking! But in my defense I did not include a single line of styling code because I knew the second day of the project was just styling the page. What was important about this page was that all the buttons and menus worked, which you're 
+                    just going to have to believe worked. But when have I ever led you astray before? After a few hours of styling it ended up looking like this:</p>
+                    <img src="./assets//npod-current.png" alt='A much better looking site' title='Rest in peace particle background'/>
+                    <p>It's fairly basic, which mostly has to do with the fact that I spend most of my time trying to get a fun animated background to work. And I did get it to work, but for some reason when I ran it though the program to optimize it for web it broke. I might
+                    try to make it work using a different program at a later date, but for now it would be too much work for the result, as I know for certain the only daily user for this app uses it on mobile, where the background wouldn't even show up. Other than that tragedy it
+                    was a much more productive day than I anticipated, and I'm looking forward to using all of the skills I learned in my blog refactor.</p>
+                    <button class='hide'>Show less</button> 
+                </section>
             </article>
             <!-- Post layout template
             <article class='post'>
