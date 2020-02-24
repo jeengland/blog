@@ -31744,7 +31744,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Nav = function Nav() {
   return _react.default.createElement("nav", null, _react.default.createElement("a", {
-    class: "current-page",
+    className: "current-page",
     href: "#"
   }, "Home"), _react.default.createElement("a", {
     href: "about.html"
@@ -41538,6 +41538,24 @@ var PostContainer = function PostContainer() {
       _useState2 = _slicedToArray(_useState, 1),
       data = _useState2[0];
 
+  var _useState3 = (0, _react.useState)([]),
+      _useState4 = _slicedToArray(_useState3, 2),
+      expanded = _useState4[0],
+      setExpanded = _useState4[1];
+
+  (0, _react.useEffect)(function () {
+    data.map(function (post, index) {
+      if (index === 0) {
+        setExpanded(function (expanded) {
+          return expanded.concat(true);
+        });
+      } else {
+        setExpanded(function (expanded) {
+          return expanded.concat(false);
+        });
+      }
+    });
+  }, []);
   return _react.default.createElement("main", {
     className: "posts"
   }, data.map(function (post, index) {
@@ -41545,6 +41563,7 @@ var PostContainer = function PostContainer() {
       title: post.title,
       date: post.date,
       text: post.content,
+      expanded: expanded[index],
       key: index
     });
   }));
