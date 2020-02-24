@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Post from './components/post';
 
 const App = () => {
     return (
-        <h1>Hello World</h1>
+        <Post />
     )
 }
 
