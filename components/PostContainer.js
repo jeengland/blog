@@ -4,24 +4,16 @@ import Post from './Post';
 
 const PostContainer = () => {
     const [data] = useState(posts.data);
-    const [expanded, setExpanded] = useState([]);
-    useEffect(() => {
-        data.map((post, index) => {
-            if (index === 0) {
-                setExpanded(expanded => expanded.concat(true));
-            } else {
-                setExpanded(expanded => expanded.concat(false));
-            }
-        }
-    )}, []);
     return (
         <main className='posts'>
             {data.map((post, index) => {
             return (
                 <Post title={post.title}
+                        id={post.id}
                         date={post.date}
                         text={post.content}
-                        expanded={expanded[index]}
+                        index={index}
+                        maxIndex={data.length - 1}
                         key={index}
                 />
             )

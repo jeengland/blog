@@ -440,12 +440,6 @@ footer a:hover {
   background-color: white;
   color: black;
 }
-.post .show {
-  display: none;
-}
-.post .hidden {
-  display: none;
-}
 .post .nasaContainer {
   max-width: 75%;
   margin: 2% auto;

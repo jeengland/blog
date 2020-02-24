@@ -1,31 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 
 const Post = (props) => {
+    const [expanded, setExpanded] = useState(props.index === props.maxIndex)
+    const expandToggle = () => {
+        setExpanded(expanded => expanded = expanded ? false : true)
+    }
     return(
-        <article className='post' id={props.title.replace(/\s+/g, '-').toLowerCase()}>
+        <article className='post' id={props.id}>
             <h2 className='title'>{props.title}</h2>
             <time>{props.date}</time>
             <section className='post-content'>
                 {props.text.map((segment, index) => {
-                        if (index === 0) {
-                            return(
-                            <React.Fragment key={index}>
-                                <ReactMarkdown className='first' source={segment} renderers={{link: props => <a href={props.href} target="_blank">{props.children}</a>}}/>
-                                <button className='show'>Show More</button>
-                            </React.Fragment>
-                            )
-                        } else if (index === props.text.length - 1) {
+                    if (expanded) {
+                        if (index === props.text.length - 1) {
                             return(
                             <React.Fragment key={index}>
                                 <ReactMarkdown source={segment} renderers={{link: props => <a href={props.href} target="_blank">{props.children}</a>}}/>
-                                <button className='hide'>Show Less</button>
+                                <button onClick={expandToggle} className='hide'>Show Less</button>
                             </React.Fragment>
                             )
                         } else {
                             return <ReactMarkdown key={index} source={segment} renderers={{link: props => <a href={props.href} target="_blank">{props.children}</a>}}/>
                         }
-
+                    } else {
+                        if (index === 0) {
+                            return(
+                                <React.Fragment key={index}>
+                                    <ReactMarkdown className='first' source={segment} renderers={{link: props => <a href={props.href} target="_blank">{props.children}</a>}}/>
+                                    <button onClick={expandToggle} className='show'>Show More</button>
+                                </React.Fragment>
+                            ) 
+                        }
+                    }
                 })}
             </section>
         </article>
