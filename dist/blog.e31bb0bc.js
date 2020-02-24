@@ -31735,7 +31735,7 @@ module.exports = {
   "data": [{
     "title": "Hello World",
     "date": "02/09/2020",
-    "content": ["Nearly every webdev article seems to say that I should have some kind of blog charting my journey through learning webdev, so I finally gave in. Of course as a webdev student it wouldn't make any sense to blog on someone else's site, so I'm building my own. I don't know enough about webdev yet to build anything other than a static site, so the beginning of this blog isn't going to look pretty. I am currently typing this blog post directly into the HTML file, and I doubt the blog is going to look pretty at the end of tonight. Let's see for ourselves:", "![The blog as it appeared on the day of this post](../assets/blog-02092020.png \"The blog as it appeared on 02/09/2020\") Not my best work! But I figured it was better to get into the practice of blogging frequently over waiting to build a site to the standards I'd like to. It should also be interesting to see the evolution of the blog site itself over time! A little background on me: I started webdev as a hobby early last year as a way to cope with unemployment using [Free Code Camp](https://www.freecodecamp.org/) and various other online resources. A combination of running into a wall learning-wise and re-employment caused me to stray from the path shortly after I started learning React-Redux. It never really left my head, though, and in the fall of 2019 I applied to be in [Lambda School](https://lambdaschool.com/) and was accepted into the Web 28 cohort, starting in January. It's been a whirlwind of a time since then, spending at least 8 hours a day nearly every day either learning or coding. I've just now officially finished the first unit, which means I officially owe them money, so I suppose there's no dropping out at this point! In all seriousness, it's been a great learning experience so far and I'd definitely give my recommendation to them. It's not for the faint of heart; the learning pace is breakneck and the material covered is challenging. But the community is extremely supportive and if you ask for help and connect with your peers, I have no doubt you too could make it in this program. I need to stop ranting and start building this blog site, so I'll leave it there for now. Here's hoping I make it past more than one post!"]
+    "content": ["Nearly every webdev article seems to say that I should have some kind of blog charting my journey through learning webdev, so I finally gave in. Of course as a webdev student it wouldn't make any sense to blog on someone else's site, so I'm building my own. I don't know enough about webdev yet to build anything other than a static site, so the beginning of this blog isn't going to look pretty. I am currently typing this blog post directly into the HTML file, and I doubt the blog is going to look pretty at the end of tonight. Let's see for ourselves:", "![The blog as it appeared on the day of this post](https://i.ibb.co/FXtwMbX/blog-02092020.pnge \"The blog as it appeared on 02/09/2020\") Not my best work! But I figured it was better to get into the practice of blogging frequently over waiting to build a site to the standards I'd like to. It should also be interesting to see the evolution of the blog site itself over time!", "A little background on me: I started webdev as a hobby early last year as a way to cope with unemployment using [Free Code Camp](https://www.freecodecamp.org/) and various other online resources. A combination of running into a wall learning-wise and re-employment caused me to stray from the path shortly after I started learning React-Redux. It never really left my head, though, and in the fall of 2019 I applied to be in [Lambda School](https://lambdaschool.com/) and was accepted into the Web 28 cohort, starting in January.", "It's been a whirlwind of a time since then, spending at least 8 hours a day nearly every day either learning or coding. I've just now officially finished the first unit, which means I officially owe them money, so I suppose there's no dropping out at this point! In all seriousness, it's been a great learning experience so far and I'd definitely give my recommendation to them. It's not for the faint of heart; the learning pace is breakneck and the material covered is challenging. But the community is extremely supportive and if you ask for help and connect with your peers, I have no doubt you too could make it in this program. I need to stop ranting and start building this blog site, so I'll leave it there for now. Here's hoping I make it past more than one post!"]
   }]
 };
 },{}],"node_modules/xtend/immutable.js":[function(require,module,exports) {
@@ -41375,21 +41375,66 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 var Post = function Post(props) {
-  var data = _posts.default.data[0];
-  console.log(data.content);
-  var title = data.title;
-  var date = data.date;
-  var text = data.content;
-  return _react.default.createElement("article", null, _react.default.createElement("h2", {
+  var _useState = (0, _react.useState)(_posts.default.data[0]),
+      _useState2 = _slicedToArray(_useState, 2),
+      data = _useState2[0],
+      setData = _useState2[1];
+
+  var _useState3 = (0, _react.useState)(data.title),
+      _useState4 = _slicedToArray(_useState3, 2),
+      title = _useState4[0],
+      setTitle = _useState4[1];
+
+  var _useState5 = (0, _react.useState)(data.date),
+      _useState6 = _slicedToArray(_useState5, 2),
+      date = _useState6[0],
+      setDate = _useState6[1];
+
+  var _useState7 = (0, _react.useState)(data.content),
+      _useState8 = _slicedToArray(_useState7, 2),
+      text = _useState8[0],
+      useText = _useState8[1];
+
+  return _react.default.createElement("article", {
+    className: "post",
+    id: title.replace(/\s+/g, '-').toLowerCase()
+  }, _react.default.createElement("h2", {
     className: "title"
   }, title), _react.default.createElement("time", null, date), _react.default.createElement("section", {
     className: "post-content"
-  }, _react.default.createElement(_reactMarkdown.default, {
-    source: text[0],
-    className: "first"
-  }), _react.default.createElement(_reactMarkdown.default, {
-    source: text[1]
+  }, text.map(function (segment, index) {
+    if (index === 0) {
+      return _react.default.createElement(_react.default.Fragment, {
+        key: index
+      }, _react.default.createElement(_reactMarkdown.default, {
+        className: "first",
+        source: segment
+      }), _react.default.createElement("button", {
+        className: "show"
+      }, "Show More"));
+    } else if (index === text.length - 1) {
+      return _react.default.createElement(_react.default.Fragment, {
+        key: index
+      }, _react.default.createElement(_reactMarkdown.default, {
+        source: segment
+      }), _react.default.createElement("button", {
+        className: "hide"
+      }, "Show Less"));
+    } else {
+      return _react.default.createElement(_reactMarkdown.default, {
+        key: index,
+        source: segment
+      });
+    }
   })));
 };
 
@@ -41441,7 +41486,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50277" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52113" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
