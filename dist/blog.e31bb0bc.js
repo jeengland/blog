@@ -31730,12 +31730,63 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"assets/posts.json":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"components/Nav.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Nav = function Nav() {
+  return _react.default.createElement("nav", null, _react.default.createElement("a", {
+    class: "current-page",
+    href: "#"
+  }, "Home"), _react.default.createElement("a", {
+    href: "about.html"
+  }, "About"), _react.default.createElement("a", {
+    href: "https://jacobengland.computer/nasa-photo-of-the-day"
+  }));
+};
+
+var _default = Nav;
+exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"components/Header.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Header = function Header() {
+  return _react.default.createElement("header", null, _react.default.createElement("h1", null, "Blog Home"), _react.default.createElement("img", {
+    src: "https://i.ibb.co/4mw1g8Q/home-header.jpg",
+    alt: "A greyscale skyline",
+    title: "Photo courtesy of New York Public Library"
+  }));
+};
+
+var _default = Header;
+exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"assets/posts.json":[function(require,module,exports) {
 module.exports = {
   "data": [{
     "title": "Hello World",
     "date": "02/09/2020",
     "content": ["Nearly every webdev article seems to say that I should have some kind of blog charting my journey through learning webdev, so I finally gave in. Of course as a webdev student it wouldn't make any sense to blog on someone else's site, so I'm building my own. I don't know enough about webdev yet to build anything other than a static site, so the beginning of this blog isn't going to look pretty. I am currently typing this blog post directly into the HTML file, and I doubt the blog is going to look pretty at the end of tonight. Let's see for ourselves:", "![The blog as it appeared on the day of this post](https://i.ibb.co/FXtwMbX/blog-02092020.pnge \"The blog as it appeared on 02/09/2020\") Not my best work! But I figured it was better to get into the practice of blogging frequently over waiting to build a site to the standards I'd like to. It should also be interesting to see the evolution of the blog site itself over time!", "A little background on me: I started webdev as a hobby early last year as a way to cope with unemployment using [Free Code Camp](https://www.freecodecamp.org/) and various other online resources. A combination of running into a wall learning-wise and re-employment caused me to stray from the path shortly after I started learning React-Redux. It never really left my head, though, and in the fall of 2019 I applied to be in [Lambda School](https://lambdaschool.com/) and was accepted into the Web 28 cohort, starting in January.", "It's been a whirlwind of a time since then, spending at least 8 hours a day nearly every day either learning or coding. I've just now officially finished the first unit, which means I officially owe them money, so I suppose there's no dropping out at this point! In all seriousness, it's been a great learning experience so far and I'd definitely give my recommendation to them. It's not for the faint of heart; the learning pace is breakneck and the material covered is challenging. But the community is extremely supportive and if you ask for help and connect with your peers, I have no doubt you too could make it in this program. I need to stop ranting and start building this blog site, so I'll leave it there for now. Here's hoping I make it past more than one post!"]
+  }, {
+    "title": "Test Post",
+    "date": "02/23/2020",
+    "content": ["This is the first sentence", "This is a second sentenct", "This is a third sentenct"]
   }]
 };
 },{}],"node_modules/xtend/immutable.js":[function(require,module,exports) {
@@ -41355,7 +41406,82 @@ ReactMarkdown.types = allTypes;
 ReactMarkdown.renderers = defaultRenderers;
 ReactMarkdown.uriTransformer = uriTransformer;
 module.exports = ReactMarkdown;
-},{"xtend":"node_modules/xtend/immutable.js","unified":"node_modules/unified/index.js","remark-parse":"node_modules/remark-parse/index.js","prop-types":"node_modules/prop-types/index.js","mdast-add-list-metadata":"node_modules/mdast-add-list-metadata/index.js","./plugins/naive-html":"node_modules/react-markdown/lib/plugins/naive-html.js","./plugins/disallow-node":"node_modules/react-markdown/lib/plugins/disallow-node.js","./ast-to-react":"node_modules/react-markdown/lib/ast-to-react.js","./wrap-table-rows":"node_modules/react-markdown/lib/wrap-table-rows.js","./get-definitions":"node_modules/react-markdown/lib/get-definitions.js","./uri-transformer":"node_modules/react-markdown/lib/uri-transformer.js","./renderers":"node_modules/react-markdown/lib/renderers.js","./symbols":"node_modules/react-markdown/lib/symbols.js"}],"components/post.js":[function(require,module,exports) {
+},{"xtend":"node_modules/xtend/immutable.js","unified":"node_modules/unified/index.js","remark-parse":"node_modules/remark-parse/index.js","prop-types":"node_modules/prop-types/index.js","mdast-add-list-metadata":"node_modules/mdast-add-list-metadata/index.js","./plugins/naive-html":"node_modules/react-markdown/lib/plugins/naive-html.js","./plugins/disallow-node":"node_modules/react-markdown/lib/plugins/disallow-node.js","./ast-to-react":"node_modules/react-markdown/lib/ast-to-react.js","./wrap-table-rows":"node_modules/react-markdown/lib/wrap-table-rows.js","./get-definitions":"node_modules/react-markdown/lib/get-definitions.js","./uri-transformer":"node_modules/react-markdown/lib/uri-transformer.js","./renderers":"node_modules/react-markdown/lib/renderers.js","./symbols":"node_modules/react-markdown/lib/symbols.js"}],"components/Post.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactMarkdown = _interopRequireDefault(require("react-markdown"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Post = function Post(props) {
+  return _react.default.createElement("article", {
+    className: "post",
+    id: props.title.replace(/\s+/g, '-').toLowerCase()
+  }, _react.default.createElement("h2", {
+    className: "title"
+  }, props.title), _react.default.createElement("time", null, props.date), _react.default.createElement("section", {
+    className: "post-content"
+  }, props.text.map(function (segment, index) {
+    if (index === 0) {
+      return _react.default.createElement(_react.default.Fragment, {
+        key: index
+      }, _react.default.createElement(_reactMarkdown.default, {
+        className: "first",
+        source: segment,
+        renderers: {
+          link: function link(props) {
+            return _react.default.createElement("a", {
+              href: props.href,
+              target: "_blank"
+            }, props.children);
+          }
+        }
+      }), _react.default.createElement("button", {
+        className: "show"
+      }, "Show More"));
+    } else if (index === props.text.length - 1) {
+      return _react.default.createElement(_react.default.Fragment, {
+        key: index
+      }, _react.default.createElement(_reactMarkdown.default, {
+        source: segment,
+        renderers: {
+          link: function link(props) {
+            return _react.default.createElement("a", {
+              href: props.href,
+              target: "_blank"
+            }, props.children);
+          }
+        }
+      }), _react.default.createElement("button", {
+        className: "hide"
+      }, "Show Less"));
+    } else {
+      return _react.default.createElement(_reactMarkdown.default, {
+        key: index,
+        source: segment,
+        renderers: {
+          link: function link(props) {
+            return _react.default.createElement("a", {
+              href: props.href,
+              target: "_blank"
+            }, props.children);
+          }
+        }
+      });
+    }
+  })));
+};
+
+var _default = Post;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-markdown":"node_modules/react-markdown/lib/react-markdown.js"}],"components/PostContainer.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -41365,9 +41491,9 @@ exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _posts = _interopRequireDefault(require("../assets/posts"));
+var _posts = _interopRequireDefault(require("../assets/posts.json"));
 
-var _reactMarkdown = _interopRequireDefault(require("react-markdown"));
+var _Post = _interopRequireDefault(require("./Post"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -41383,82 +41509,90 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-var Post = function Post(props) {
-  var _useState = (0, _react.useState)(_posts.default.data[0]),
-      _useState2 = _slicedToArray(_useState, 2),
-      data = _useState2[0],
-      setData = _useState2[1];
+var PostContainer = function PostContainer() {
+  var _useState = (0, _react.useState)(_posts.default.data),
+      _useState2 = _slicedToArray(_useState, 1),
+      data = _useState2[0];
 
-  var _useState3 = (0, _react.useState)(data.title),
-      _useState4 = _slicedToArray(_useState3, 2),
-      title = _useState4[0],
-      setTitle = _useState4[1];
-
-  var _useState5 = (0, _react.useState)(data.date),
-      _useState6 = _slicedToArray(_useState5, 2),
-      date = _useState6[0],
-      setDate = _useState6[1];
-
-  var _useState7 = (0, _react.useState)(data.content),
-      _useState8 = _slicedToArray(_useState7, 2),
-      text = _useState8[0],
-      useText = _useState8[1];
-
-  return _react.default.createElement("article", {
-    className: "post",
-    id: title.replace(/\s+/g, '-').toLowerCase()
-  }, _react.default.createElement("h2", {
-    className: "title"
-  }, title), _react.default.createElement("time", null, date), _react.default.createElement("section", {
-    className: "post-content"
-  }, text.map(function (segment, index) {
-    if (index === 0) {
-      return _react.default.createElement(_react.default.Fragment, {
-        key: index
-      }, _react.default.createElement(_reactMarkdown.default, {
-        className: "first",
-        source: segment
-      }), _react.default.createElement("button", {
-        className: "show"
-      }, "Show More"));
-    } else if (index === text.length - 1) {
-      return _react.default.createElement(_react.default.Fragment, {
-        key: index
-      }, _react.default.createElement(_reactMarkdown.default, {
-        source: segment
-      }), _react.default.createElement("button", {
-        className: "hide"
-      }, "Show Less"));
-    } else {
-      return _react.default.createElement(_reactMarkdown.default, {
-        key: index,
-        source: segment
-      });
-    }
-  })));
+  return _react.default.createElement("main", {
+    className: "posts"
+  }, data.map(function (post, index) {
+    return _react.default.createElement(_Post.default, {
+      title: post.title,
+      date: post.date,
+      text: post.content,
+      key: index
+    });
+  }));
 };
 
-var _default = Post;
+var _default = PostContainer;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../assets/posts":"assets/posts.json","react-markdown":"node_modules/react-markdown/lib/react-markdown.js"}],"index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../assets/posts.json":"assets/posts.json","./Post":"components/Post.js"}],"components/Column.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _Header = _interopRequireDefault(require("./Header"));
+
+var _PostContainer = _interopRequireDefault(require("./PostContainer"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Column = function Column() {
+  return _react.default.createElement("div", {
+    className: "col"
+  }, _react.default.createElement(_Header.default, null), _react.default.createElement(_PostContainer.default, null));
+};
+
+var _default = Column;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","./Header":"components/Header.js","./PostContainer":"components/PostContainer.js"}],"App.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _Nav = _interopRequireDefault(require("./components/Nav"));
+
+var _Column = _interopRequireDefault(require("./components/Column"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var App = function App() {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Nav.default, null), _react.default.createElement(_Column.default, null));
+};
+
+var _default = App;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","./components/Nav":"components/Nav.js","./components/Column":"components/Column.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
-var _post = _interopRequireDefault(require("./components/post"));
+var _App = _interopRequireDefault(require("./App"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var App = function App() {
-  return _react.default.createElement(_post.default, null);
+var Return = function Return() {
+  return _react.default.createElement(_App.default, null);
 };
 
 var rootElement = document.querySelector('#root');
 
-_reactDom.default.render(_react.default.createElement(App, null), rootElement);
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./components/post":"components/post.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+_reactDom.default.render(_react.default.createElement(Return, null), rootElement);
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./App":"App.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

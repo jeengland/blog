@@ -1,34 +1,29 @@
-import React, { useState } from 'react';
-import posts from '../assets/posts';
+import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
 const Post = (props) => {
-    const [data, setData] = useState(posts.data[0]);
-    const [title, setTitle] = useState(data.title);
-    const [date, setDate] = useState(data.date);
-    const [text, useText] = useState(data.content);
     return(
-        <article className='post' id={title.replace(/\s+/g, '-').toLowerCase()}>
-            <h2 className='title'>{title}</h2>
-            <time>{date}</time>
+        <article className='post' id={props.title.replace(/\s+/g, '-').toLowerCase()}>
+            <h2 className='title'>{props.title}</h2>
+            <time>{props.date}</time>
             <section className='post-content'>
-                {text.map((segment, index) => {
+                {props.text.map((segment, index) => {
                         if (index === 0) {
                             return(
                             <React.Fragment key={index}>
-                                <ReactMarkdown className='first' source={segment} />
+                                <ReactMarkdown className='first' source={segment} renderers={{link: props => <a href={props.href} target="_blank">{props.children}</a>}}/>
                                 <button className='show'>Show More</button>
                             </React.Fragment>
                             )
-                        } else if (index === text.length - 1) {
+                        } else if (index === props.text.length - 1) {
                             return(
                             <React.Fragment key={index}>
-                                <ReactMarkdown source={segment} />
+                                <ReactMarkdown source={segment} renderers={{link: props => <a href={props.href} target="_blank">{props.children}</a>}}/>
                                 <button className='hide'>Show Less</button>
                             </React.Fragment>
                             )
                         } else {
-                            return <ReactMarkdown key={index} source={segment} />
+                            return <ReactMarkdown key={index} source={segment} renderers={{link: props => <a href={props.href} target="_blank">{props.children}</a>}}/>
                         }
 
                 })}

@@ -1,12 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Post from './components/post';
+import App from './App';
 
-const App = () => {
-    return (
-        <Post />
-    )
+const Return = () => {
+    return <App />
 }
 
 const rootElement = document.querySelector('#root');
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(<Return />, rootElement);
