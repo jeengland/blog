@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
+import { Link } from 'react-router-dom';
 
 const Post = (props) => {
     const [expanded, setExpanded] = useState(props.index === props.maxIndex)
@@ -8,8 +9,10 @@ const Post = (props) => {
     }
     return(
         <article className='post' id={props.id}>
-            <h2 className='title'>{props.title}</h2>
-            <time>{props.date}</time>
+            <Link to={`/post/${props.index}`}>
+                <h2 className='title'>{props.title}</h2>
+                <time>{props.date}</time>
+            </Link>
             <section className='post-content'>
                 {props.text.map((segment, index) => {
                     if (expanded) {
