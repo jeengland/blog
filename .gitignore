@@ -1,6 +1,12 @@
 # npm files
 node_modules/
+
+# parcel files
 .cache/
+
+# vscode files
+.vscode/
 
 # old blogsite
 *-old.*
+
