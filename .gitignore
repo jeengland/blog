@@ -3,6 +3,7 @@ node_modules/
 
 # parcel files
 .cache/
+dist/
 
 # vscode files
 .vscode/
