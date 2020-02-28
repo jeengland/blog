@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Link } from 'react-router-dom';
 
 const Post = (props) => {
     const [expanded, setExpanded] = useState(props.index === props.maxIndex)
-    const expandToggle = () => {
-        setExpanded(expanded => expanded = expanded ? false : true)
+    const [windowPos, setWindowPos ] = useState(undefined);
+    const expandToggle = (scroll) => {
+        scroll ? setWindowPos(window.scrollY) : undefined;
+        setExpanded(expanded => expanded = expanded ? false : true);
     }
+    useEffect(() => window.scrollTo(0, windowPos), [expanded])
     return(
-        <article className='post' id={props.id} onClick={() => window.scrollTo(0, 0)}>
-            <Link to={`/post/${props.index}`}>
+        <article className='post' id={props.id}>
+            <Link to={`/post/${props.index}`} onClick={() => window.scrollTo(0, 0)}>
                 <h2 className='title'>{props.title}</h2>
                 <time>{props.date}</time>
             </Link>
@@ -20,7 +23,7 @@ const Post = (props) => {
                             return(
                             <React.Fragment key={index}>
                                 <ReactMarkdown source={segment} renderers={{link: props => <a href={props.href} target="_blank">{props.children}</a>}}/>
-                                <button onClick={expandToggle} className='hide'>Show Less</button>
+                                <button onClick={() => expandToggle(false)} className='hide'>Show Less</button>
                             </React.Fragment>
                             )
                         } else {
@@ -31,7 +34,7 @@ const Post = (props) => {
                             return(
                                 <React.Fragment key={index}>
                                     <ReactMarkdown className='first' source={segment} renderers={{link: props => <a href={props.href} target="_blank">{props.children}</a>}}/>
-                                    <button onClick={expandToggle} className='show'>Show More</button>
+                                    <button onClick={() => expandToggle(true)} className='show'>Show More</button>
                                 </React.Fragment>
                             ) 
                         }
