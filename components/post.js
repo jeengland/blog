@@ -8,7 +8,7 @@ const Post = (props) => {
         setExpanded(expanded => expanded = expanded ? false : true)
     }
     return(
-        <article className='post' id={props.id}>
+        <article className='post' id={props.id} onClick={() => window.scrollTo(0, 0)}>
             <Link to={`/post/${props.index}`}>
                 <h2 className='title'>{props.title}</h2>
                 <time>{props.date}</time>
