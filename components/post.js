@@ -12,7 +12,7 @@ const Post = (props) => {
     useEffect(() => window.scrollTo(0, windowPos), [expanded])
     return(
         <article className='post' id={props.id}>
-            <Link to={`/post/${props.index}`} onClick={() => window.scrollTo(0, 0)}>
+            <Link to={`/blog/post/${props.index}`} onClick={() => window.scrollTo(0, 0)}>
                 <h2 className='title'>{props.title}</h2>
                 <time>{props.date}</time>
             </Link>

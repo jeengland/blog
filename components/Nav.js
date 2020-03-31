@@ -3,11 +3,12 @@ import { NavLink, useHistory } from 'react-router-dom';
 
 const Nav = () => {
     const page = useHistory().location.pathname;
-    if (page === '/') {
+    if (page === '/blog/') {
         return (
             <nav>
                 {/* #TODO add a logo */}
-                <NavLink className='current-page' to='/' onClick={() => window.scrollTo(0, 0)}>Home</NavLink>
+                {/* #LOGO in pictures */}
+                <NavLink className='current-page' to='/blog/' onClick={() => window.scrollTo(0, 0)}>Home</NavLink>
                 <a href='#'>About</a>
                 <a href='https://jacobengland.computer/nasa-photo-of-the-day'></a>
             </nav>
@@ -16,7 +17,7 @@ const Nav = () => {
         return (
             <nav>
                 {/* #TODO add a logo */}
-                <NavLink to='/' onClick={() => window.scrollTo(0, 0)}>Home</NavLink>
+                <NavLink to='/blog/' onClick={() => window.scrollTo(0, 0)}>Home</NavLink>
                 <a href='#'>About</a>
                 <a href='https://jacobengland.computer/nasa-photo-of-the-day'></a>
             </nav>

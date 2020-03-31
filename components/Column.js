@@ -10,11 +10,11 @@ const Column = () => {
     const [data] = useState(posts.data);
     return (
         <div className='col'>
-            <Route exact path='/' >
+            <Route exact path='/blog/' >
                 <Header home={true} />
                 <PostList data={data} />
             </Route>
-            <Route path='/post/:id' >
+            <Route path='/blog/post/:id' >
                 <Header home={false} />
                 <SinglePost data={data}/>
             </Route>
